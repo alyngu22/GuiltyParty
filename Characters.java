@@ -8,18 +8,27 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Characters extends Actor
 {
-    protected boolean longHair;
-    protected boolean tallHeight;
-    protected boolean thinWeight; 
-    protected boolean girlGender; 
+    protected boolean hasShortHair;
+    protected boolean isTall;
+    protected boolean isThin; 
+    protected boolean isFemale;
+    protected boolean isStudent;
     protected int charInt; 
-    static protected boolean[] testimony = new boolean[5];
+    
+    static protected boolean[] hasGivenTestimony = new boolean[10];
     
     /**
      * Act - do whatever the Characters wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    
+    public Characters(boolean hair, boolean height, boolean weight, boolean gender, boolean position, int num) {
+        hasShortHair = hair;
+        isTall = height;
+        isThin = weight;
+        isFemale = gender;
+        isStudent = position;
+        charInt = num;
+    }
     public void act() 
     {
         if (canGiveTestimony()) {
@@ -28,7 +37,8 @@ public class Characters extends Actor
     }   
     
     public boolean canGiveTestimony() {
-        if (Greenfoot.mousePressed(this) || testimony[charInt]) {
+        if (Greenfoot.mousePressed(this) || !hasGivenTestimony[charInt]) {
+           hasGivenTestimony[charInt] = true;
            return true;
         }
         return false;

@@ -1,17 +1,20 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Sarah here.
+ * Write a description of class GraceIvanova here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Sarah extends Characters
+public class GraceIvanova extends Characters
 {
     /**
-     * Act - do whatever the Sarah wants to do. This method is called whenever
+     * Act - do whatever the GraceIvanova wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public GraceIvanova() {
+        super(true,false,false,true,true,7);
+    }
     public void act() 
     {
         // Add your action code here.
