@@ -12,14 +12,17 @@ public class HallwayClick extends Rooms
      * Act - do whatever the HallwayClick wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-     static boolean visited = false;
-     public void act() 
-     {   
+    public static boolean visited = false;
+    public void act() 
+    {
         if (Greenfoot.mousePressed(this) && !visited) {
-            visited = true;
-            getImage().setTransparency(100);
-            getImage().setColor(Color.RED);
-            Greenfoot.setWorld(new Hallway());
+           visited = true;
+           Greenfoot.setWorld(new Auditorium());
+        }
+        if (visited) {
+            getImage().setTransparency(255);
+            setImage(new GreenfootImage("X.png"));
+
         }
     }
 }

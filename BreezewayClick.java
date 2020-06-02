@@ -12,15 +12,17 @@ public class BreezewayClick extends Rooms
      * Act - do whatever the BreezewayClick wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public BreezewayClick() {
-        roomInt = 1;
-    }
+    public static boolean visited = false;
     public void act() 
     {
         if (Greenfoot.mousePressed(this) && !visited) {
-            ((MainMap)getWorld()).visited[roomInt] = true;
-            Greenfoot.setWorld(new Breezeway());
+           visited = true;
+           Greenfoot.setWorld(new Auditorium());
         }
-        // Add your action code here.
-    }    
+        if (visited) {
+            getImage().setTransparency(255);
+            setImage(new GreenfootImage("X.png"));
+
+        }
+    }
 }
