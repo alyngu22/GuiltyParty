@@ -17,7 +17,7 @@ public class CommonsClick extends Rooms
     {
         if (Greenfoot.mousePressed(this) && !visited) {
            visited = true;
-           Greenfoot.setWorld(new Auditorium());
+           Greenfoot.setWorld(new Commons());
         }
         if (visited) {
             getImage().setTransparency(255);

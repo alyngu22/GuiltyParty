@@ -17,7 +17,7 @@ public class VisualRoomClick extends Rooms
     {
         if (Greenfoot.mousePressed(this) && !visited) {
            visited = true;
-           Greenfoot.setWorld(new Auditorium());
+           Greenfoot.setWorld(new VisualRoom());
         }
         if (visited) {
             getImage().setTransparency(255);
