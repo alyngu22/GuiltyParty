@@ -73,5 +73,15 @@ public class MainMap extends World
         addObject(suspect9,1020,192);
         Suspect suspect10 = new Suspect();
         addObject(suspect10,66,641);
+        Hallway1 hallway1 = new Hallway1();
+        addObject(hallway1,332,628);
+        Hallway2 hallway2 = new Hallway2();
+        addObject(hallway2,385,504);
+        Hallway3 hallway3 = new Hallway3();
+        addObject(hallway3,683,466);
+        Hallway4 hallway4 = new Hallway4();
+        addObject(hallway4,885,355);
+        Hallway5 hallway5 = new Hallway5();
+        addObject(hallway5,1111,310);
     } 
 }
