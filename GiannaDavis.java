@@ -14,7 +14,8 @@ public class GiannaDavis extends Characters
      */
     public GiannaDavis() {
             super("Gianna Davis", true,true,true,true,true,9);
-
+            GreenfootImage image = getImage();
+            image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);
     }
     public void act() 
     {

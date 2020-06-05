@@ -14,6 +14,8 @@ public class GraceIvanova extends Characters
      */
     public GraceIvanova() {
         super("Grace Ivanova", true,false,false,true,true,7);
+        GreenfootImage image = getImage();
+        image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);        
     }
     public void act() 
     {

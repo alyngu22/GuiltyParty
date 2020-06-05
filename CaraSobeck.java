@@ -14,6 +14,8 @@ public class CaraSobeck extends Characters
      */
     public CaraSobeck() {
         super("Cara Sobeck", true,true,false,true,true,5);
+        GreenfootImage image = getImage();
+        image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);
     }
     public void act() 
     {

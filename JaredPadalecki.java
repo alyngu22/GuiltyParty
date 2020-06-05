@@ -14,6 +14,8 @@ public class JaredPadalecki extends Characters
      */
     public JaredPadalecki() {
         super("Jared Padalecki", false,true,true,false,true,4);
+        GreenfootImage image = getImage();
+        image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);        
     }
     public void act() 
     {

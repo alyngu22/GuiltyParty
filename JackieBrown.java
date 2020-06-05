@@ -14,6 +14,8 @@ public class JackieBrown extends Characters
      */
     public JackieBrown() {
         super("Jackie Brown", false,false,false,true,true,3);
+        GreenfootImage image = getImage();
+        image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);         
     }
     public void act()
     {

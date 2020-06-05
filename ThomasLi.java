@@ -14,6 +14,8 @@ public class ThomasLi extends Characters
      */
     public ThomasLi() {
         super("Thomas Li",true,false,true,false,true,6);
+        GreenfootImage image = getImage();
+        image.scale((int)image.getWidth()/2, (int)image.getHeight()/2); 
     }
     public void act() 
     {

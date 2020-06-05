@@ -14,7 +14,8 @@ public class AmeliaRossi extends Characters
      */
     public AmeliaRossi() {
             super("Amelia Rossi",false,true,true,true,true,8);
-
+            GreenfootImage image = getImage();
+            image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);
     }
     public void act() 
     {

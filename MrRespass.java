@@ -14,6 +14,8 @@ public class MrRespass extends Characters
      */
     public MrRespass() {
         super("Mr. Respass", true,true,true,false,false,0);
+        GreenfootImage image = getImage();
+        image.scale((int)image.getWidth()/2, (int)image.getHeight()/2); 
     }
     public void act() 
     {

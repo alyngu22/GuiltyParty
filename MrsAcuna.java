@@ -14,6 +14,8 @@ public class MrsAcuna extends Characters
      */
     public MrsAcuna() {
         super("Mrs. Acuna", true,false,true,true,false,2);
+        GreenfootImage image = getImage();
+        image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);         
     }
     public void act() 
     {
