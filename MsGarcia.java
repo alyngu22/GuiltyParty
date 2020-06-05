@@ -13,7 +13,7 @@ public class MsGarcia extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public MsGarcia() {
-        super(true,true,false,true,false,1);
+        super("Ms. Garcia", true,true,false,true,false,1);
        
     }
     public void act() 

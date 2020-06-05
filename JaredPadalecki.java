@@ -13,7 +13,7 @@ public class JaredPadalecki extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public JaredPadalecki() {
-        super(false,true,true,false,true,4);
+        super("Jared Padalecki", false,true,true,false,true,4);
     }
     public void act() 
     {

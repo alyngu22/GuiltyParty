@@ -13,7 +13,7 @@ public class GiannaDavis extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public GiannaDavis() {
-            super(true,true,true,true,true,9);
+            super("Gianna Davis", true,true,true,true,true,9);
 
     }
     public void act() 

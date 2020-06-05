@@ -13,7 +13,7 @@ public class ThomasLi extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public ThomasLi() {
-        super(true,false,true,false,true,6);
+        super("Thomas Li",true,false,true,false,true,6);
     }
     public void act() 
     {

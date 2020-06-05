@@ -1,19 +1,22 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Hallway1 here.
+ * Write a description of class GiannaDavisTag here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Hallway1 extends HallwayClick
+public class GiannaDavisTag extends CharacterTag
 {
     /**
-     * Act - do whatever the Hallway1 wants to do. This method is called whenever
+     * Act - do whatever the GiannaDavisTag wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public GiannaDavisTag() {
+        cInt = 2;
+    }
     public void act() 
     {
-        // Add your action code here.
+        super.act();
     }    
 }

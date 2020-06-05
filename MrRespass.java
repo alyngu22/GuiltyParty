@@ -13,7 +13,7 @@ public class MrRespass extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public MrRespass() {
-        super(true,true,true,false,false,0);
+        super("Mr. Respass", true,true,true,false,false,0);
     }
     public void act() 
     {

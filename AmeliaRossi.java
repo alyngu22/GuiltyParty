@@ -13,7 +13,7 @@ public class AmeliaRossi extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public AmeliaRossi() {
-            super(false,true,true,true,true,8);
+            super("Amelia Rossi",false,true,true,true,true,8);
 
     }
     public void act() 

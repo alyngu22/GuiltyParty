@@ -13,7 +13,7 @@ public class MrsAcuna extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public MrsAcuna() {
-        super(true,false,true,true,false,2);
+        super("Mrs. Acuna", true,false,true,true,false,2);
     }
     public void act() 
     {

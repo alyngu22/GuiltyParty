@@ -13,7 +13,7 @@ public class GraceIvanova extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public GraceIvanova() {
-        super(true,false,false,true,true,7);
+        super("Grace Ivanova", true,false,false,true,true,7);
     }
     public void act() 
     {

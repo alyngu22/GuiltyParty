@@ -1,8 +1,8 @@
 #BlueJ class context
 comment0.target=Characters
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Characters\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=hair\ height\ weight\ gender\ position\ num
-comment1.target=Characters(boolean,\ boolean,\ boolean,\ boolean,\ boolean,\ int)
+comment1.params=name\ hair\ height\ weight\ gender\ position\ num
+comment1.target=Characters(java.lang.String,\ boolean,\ boolean,\ boolean,\ boolean,\ boolean,\ int)
 comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Characters\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
 comment2.params=
 comment2.target=void\ act()
@@ -10,4 +10,6 @@ comment3.params=
 comment3.target=boolean\ canGiveTestimony()
 comment4.params=
 comment4.target=void\ giveTestimony()
-numComments=5
+comment5.params=
+comment5.target=java.lang.String\ getDescription()
+numComments=6

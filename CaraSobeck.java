@@ -13,7 +13,7 @@ public class CaraSobeck extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public CaraSobeck() {
-        super(true,true,false,true,true,5);
+        super("Cara Sobeck", true,true,false,true,true,5);
     }
     public void act() 
     {
