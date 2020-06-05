@@ -25,8 +25,6 @@ public class CharacterTag extends Button
             getWorld().removeObjects(getWorld().getObjects(Description.class));
             Description d = new Description(c.getDescription());
             getWorld().addObject(d,1200,350);
-            
-            ;
         }
     }
 }
