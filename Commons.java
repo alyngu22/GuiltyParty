@@ -31,5 +31,7 @@ public class Commons extends World
 
         MapButton mapButton = new MapButton();
         addObject(mapButton,58,57);
+        JackieBrown jackieBrown = new JackieBrown();
+        addObject(jackieBrown,1107,229);
     }
 }

@@ -32,5 +32,9 @@ public class Auditorium extends World
 
         MapButton mapButton = new MapButton();
         addObject(mapButton,58,57);
+        AmeliaRossi ameliaRossi = new AmeliaRossi();
+        addObject(ameliaRossi,1150,417);
+        CaraSobeck caraSobeck = new CaraSobeck();
+        addObject(caraSobeck,479,486);
     }
 }

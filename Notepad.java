@@ -8,7 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Notepad extends World
 {
-
+    public static boolean[]cluesCollected = new boolean[3];
+    public static boolean[]suspectedCollected = new boolean[10];
     /**
      * Constructor for objects of class Notepad.
      * 

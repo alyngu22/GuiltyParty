@@ -35,6 +35,7 @@ public class Characters extends Actor
     {
         if (canGiveTestimony()) {
             giveTestimony();
+            Notepad.suspectedCollected[charInt] = true;
         }
     }   
     

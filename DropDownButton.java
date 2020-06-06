@@ -16,14 +16,15 @@ public class DropDownButton extends Button
            public boolean isExpanded = false;
             AmeliaRossiTag ameliaRossiTag = new AmeliaRossiTag();
             CaraSobeckTag caraSobeckTag = new CaraSobeckTag();
-             GiannaDavisTag giannaDavisTag = new GiannaDavisTag();
-             GraceIvanovaTag graceIvanovaTag = new GraceIvanovaTag();
-             JackieBrownTag jackieBrownTag = new JackieBrownTag();
-             JaredPadaleckiTag jaredPadaleckiTag = new JaredPadaleckiTag();
-             MrRespassTag mrRespassTag = new MrRespassTag();
-             MrsAcunaTag mrsAcunaTag = new MrsAcunaTag();
-             MsGarciaTag msGarciaTag = new MsGarciaTag();
-             ThomasLiTag thomasLiTag = new ThomasLiTag();
+            GiannaDavisTag giannaDavisTag = new GiannaDavisTag();
+            GraceIvanovaTag graceIvanovaTag = new GraceIvanovaTag();
+            JackieBrownTag jackieBrownTag = new JackieBrownTag();
+            JaredPadaleckiTag jaredPadaleckiTag = new JaredPadaleckiTag();
+            MrRespassTag mrRespassTag = new MrRespassTag();
+            MrsAcunaTag mrsAcunaTag = new MrsAcunaTag();
+            MsGarciaTag msGarciaTag = new MsGarciaTag();
+            ThomasLiTag thomasLiTag = new ThomasLiTag();
+            public CharacterTag[] cTagArray = {ameliaRossiTag, caraSobeckTag, giannaDavisTag, graceIvanovaTag, jackieBrownTag, jaredPadaleckiTag, mrRespassTag, mrsAcunaTag, msGarciaTag,thomasLiTag};
 
                
 
@@ -40,30 +41,17 @@ public class DropDownButton extends Button
             }
         }    
         public void expand() {
-                 getWorld().addObject(ameliaRossiTag,150,200);
-                 getWorld().addObject(caraSobeckTag,150,250);
-                 getWorld().addObject(giannaDavisTag,150,300);
-                 getWorld().addObject(graceIvanovaTag,150,350);
-                 getWorld().addObject(jackieBrownTag,150,400);
-                 getWorld().addObject(jaredPadaleckiTag,150,450);
-                 getWorld().addObject(mrRespassTag,150,500);
-                 getWorld().addObject(mrsAcunaTag,150,550);
-                 getWorld().addObject(msGarciaTag,150,600);
-                 getWorld().addObject(thomasLiTag,150,650);
+                for (int i = 0; i < cTagArray.length; i++) {
+                    //if (((Notepad)getWorld()).suspectedCollected[i]){
+                        getWorld().addObject(cTagArray[i],150,200 + (i * 50));
+                    //}
+                }
                  isExpanded = true;
             }
         public void collapse() {
-                getWorld().removeObject(ameliaRossiTag);
-                 getWorld().removeObject(caraSobeckTag);
-                 getWorld().removeObject(giannaDavisTag);
-                 getWorld().removeObject(graceIvanovaTag);
-                 getWorld().removeObject(jackieBrownTag);
-                 getWorld().removeObject(jaredPadaleckiTag);
-                 getWorld().removeObject(mrRespassTag);
-                 getWorld().removeObject(mrsAcunaTag);
-                 getWorld().removeObject(msGarciaTag);
-                 getWorld().removeObject(thomasLiTag);
-                 isExpanded = false;
+                for (int i = 0; i < cTagArray.length; i++) {
+                    getWorld().removeObject(cTagArray[i]);
+                }
             }
     }
     

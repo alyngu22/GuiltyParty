@@ -46,7 +46,7 @@ public class MainMap extends World
         NotepadButton notepadButton = new NotepadButton();
         addObject(notepadButton,1509,714);
 
-        Clues clues = new Clues();
+        Clue clues = new Clue();
         addObject(clues,1015,570);
         Suspect suspect = new Suspect();
         addObject(suspect,1099,566);
@@ -60,11 +60,11 @@ public class MainMap extends World
         addObject(suspect5,689,678);
         Suspect suspect6 = new Suspect();
         addObject(suspect6,374,363);
-        Clues clues2 = new Clues();
+        Clue clues2 = new Clue();
         addObject(clues2,525,311);
         Suspect suspect7 = new Suspect();
         addObject(suspect7,743,229);
-        Clues clues3 = new Clues();
+        Clue clues3 = new Clue();
         addObject(clues3,885,367);
         Suspect suspect8 = new Suspect();
         addObject(suspect8,386,500);
