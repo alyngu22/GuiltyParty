@@ -13,12 +13,12 @@ public class JaredPadalecki extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public JaredPadalecki() {
-        super("Jared Padalecki", false,true,true,false,true,4);
+        super("Jared Padalecki", false,true,true,false,true,5);
         GreenfootImage image = getImage();
         image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);        
     }
     public void act() 
     {
-        // Add your action code here.
+        super.act();
     }    
 }

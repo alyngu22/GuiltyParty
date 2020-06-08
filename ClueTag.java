@@ -1,30 +1,29 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class CharacterTag here.
+ * Write a description of class ClueTag here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class CharacterTag extends Button
+public class ClueTag extends Button
 {
+    public static Evidence[] clues = {new Hair(), new Lanyard(), new Locker()};
+    public int cluesInt;
+    public boolean available = true;
     /**
-     * Act - do whatever the CharacterTag wants to do. This method is called whenever
+     * Act - do whatever the ClueTag wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public static Characters[] suspects = {new AmeliaRossi(), new CaraSobeck(), new GiannaDavis(), new GraceIvanova(), new JackieBrown(), new JaredPadalecki(), new MrRespass(), new MrsAcuna(), new MsGarcia(), new ThomasLi()};
-    public int cInt;
-    public boolean available = true;
-    
     public void act() 
     {
         showDescription();
-    }    
+    }
     public void showDescription() {
         if (Greenfoot.mouseClicked(this) && available) {
-            Characters c = suspects[cInt];
+            Evidence e = clues[cluesInt];
             getWorld().removeObjects(getWorld().getObjects(Description.class));
-            Description d = new Description(c.getDescription(),true);
+            Description d = new Description(e.getDescription(),true);
             getWorld().addObject(d,1200,350);
         }
     }

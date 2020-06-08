@@ -33,23 +33,25 @@ public class Characters extends Actor
     }
     public void act() 
     {
-        if (canGiveTestimony()) {
+        if (Greenfoot.mousePressed(this)) {
+            Notepad.suspectedCollected[charInt] = true;
+            getWorld().removeObject(this);
+        }
+        /*if (canGiveTestimony()) {
             giveTestimony();
             Notepad.suspectedCollected[charInt] = true;
-        }
+        }*/
     }   
     
-    public boolean canGiveTestimony() {
-        if (Greenfoot.mousePressed(this) || !hasGivenTestimony[charInt]) {
-           hasGivenTestimony[charInt] = true;
+    /*public boolean canGiveTestimony() {
+        if (Greenfoot.mousePressed(this)) {
+           getWorld().removeObject(this);
            return true;
         }
         return false;
-    }
+    }*/
     
-    public void giveTestimony(){
     
-    }
     public String getDescription() {
         String s = "";
         s += name;

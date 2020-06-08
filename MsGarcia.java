@@ -13,12 +13,12 @@ public class MsGarcia extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public MsGarcia() {
-        super("Ms. Garcia", true,true,false,true,false,1);
+        super("Ms. Garcia", true,true,false,true,false,8);
         GreenfootImage image = getImage();
         image.scale((int)image.getWidth()/2, (int)image.getHeight()/2); 
     }
     public void act() 
     {
-        // Add your action code here.
+        super.act();
     }    
 }

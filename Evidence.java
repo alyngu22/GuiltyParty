@@ -13,10 +13,18 @@ public class Evidence extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public int eNum;
+    public String description;
+    public Evidence(String name) {
+        description = name;
+    }
     public void act() 
     {
         if (Greenfoot.mousePressed(this)) {
             Notepad.cluesCollected[eNum] = true;
         }
-    }    
+    }
+    public String getDescription() {
+        String s = description;
+        return s;
+    }
 }

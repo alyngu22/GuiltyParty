@@ -13,12 +13,12 @@ public class GraceIvanova extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public GraceIvanova() {
-        super("Grace Ivanova", true,false,false,true,true,7);
+        super("Grace Ivanova", true,false,false,true,true,3);
         GreenfootImage image = getImage();
         image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);        
     }
     public void act() 
     {
-        // Add your action code here.
+        super.act();
     }    
 }

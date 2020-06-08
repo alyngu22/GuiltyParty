@@ -13,11 +13,12 @@ public class GiannaDavis extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public GiannaDavis() {
-            super("Gianna Davis", true,true,true,true,true,9);
+            super("Gianna Davis", true,true,true,true,true,2);
             GreenfootImage image = getImage();
             image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);
     }
     public void act() 
     {
+        super.act();
     }    
 }

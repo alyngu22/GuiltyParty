@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class Description here.
@@ -12,11 +12,30 @@ public class Description extends Button
      * Act - do whatever the Description wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public Description(String s) {
-        setImage(new GreenfootImage(s,30,null,null));
+    public boolean isTrue;
+    public String description;
+    public Description(String s, boolean correct) {
+        description = s;
+        setImage(new GreenfootImage(description,30,null,null));
+        isTrue = correct;
     }
     public void act() 
     {
-        // Add your action code here.
+        lieDetector();   
     }    
+    public void lieDetector() {
+        if (Greenfoot.mouseMoved(this)) {
+            if (isTrue) {
+                setImage(new GreenfootImage(description, 30, Color.GREEN, null));
+            }
+            else {
+                setImage(new GreenfootImage(description, 30, Color.RED, null));
+            }
+        }
+       // else {
+       //     setImage(new GreenfootImage(description, 30, null, null));
+
+       // }
+        
+    }
 }

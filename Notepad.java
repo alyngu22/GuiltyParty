@@ -34,9 +34,11 @@ public class Notepad extends World
         Note note = new Note();
         addObject(note,1200,400);
 
-        DropDownButton dropDownButton = new DropDownButton();
-        addObject(dropDownButton,150,150);
+        DropDownSuspects dropDownSuspects = new DropDownSuspects();
+        addObject(dropDownSuspects,150,150);
 
-       
+        DropDownClues dropDownClues = new DropDownClues();
+        addObject(dropDownClues,330,150);
+        
     }
 }

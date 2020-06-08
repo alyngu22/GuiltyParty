@@ -13,11 +13,12 @@ public class AmeliaRossi extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public AmeliaRossi() {
-            super("Amelia Rossi",false,true,true,true,true,8);
+            super("Amelia Rossi",false,true,true,true,true,0);
             GreenfootImage image = getImage();
             image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);
     }
     public void act() 
     {
+        super.act();
     }    
 }

@@ -2,15 +2,15 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class DropDownButton here.
+ * Write a description of class DropDownSuspects here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class DropDownButton extends Button
+public class DropDownSuspects extends Button
 {
     /**
-     * Act - do whatever the DropDownButton wants to do. This method is called whenever
+     * Act - do whatever the DropDownSuspects wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
            public boolean isExpanded = false;
@@ -24,7 +24,7 @@ public class DropDownButton extends Button
             MrsAcunaTag mrsAcunaTag = new MrsAcunaTag();
             MsGarciaTag msGarciaTag = new MsGarciaTag();
             ThomasLiTag thomasLiTag = new ThomasLiTag();
-            public CharacterTag[] cTagArray = {ameliaRossiTag, caraSobeckTag, giannaDavisTag, graceIvanovaTag, jackieBrownTag, jaredPadaleckiTag, mrRespassTag, mrsAcunaTag, msGarciaTag,thomasLiTag};
+            public CharacterTag[] charTagArray = {ameliaRossiTag, caraSobeckTag, giannaDavisTag, graceIvanovaTag, jackieBrownTag, jaredPadaleckiTag, mrRespassTag, mrsAcunaTag, msGarciaTag,thomasLiTag};
 
                
 
@@ -41,16 +41,20 @@ public class DropDownButton extends Button
             }
         }    
         public void expand() {
-                for (int i = 0; i < cTagArray.length; i++) {
-                    //if (((Notepad)getWorld()).suspectedCollected[i]){
-                        getWorld().addObject(cTagArray[i],150,200 + (i * 50));
-                    //}
+                for (int i = 0; i < charTagArray.length; i++) {
+                    if (((Notepad)getWorld()).suspectedCollected[i]){
+                        getWorld().addObject(charTagArray[i],150,200 + (i * 50));
+                    }
+                    else {
+                        charTagArray[i].changeImage();
+                        getWorld().addObject(charTagArray[i], 150, 200 + (i * 50));
+                    }
                 }
                  isExpanded = true;
             }
         public void collapse() {
-                for (int i = 0; i < cTagArray.length; i++) {
-                    getWorld().removeObject(cTagArray[i]);
+                for (int i = 0; i < charTagArray.length; i++) {
+                    getWorld().removeObject(charTagArray[i]);
                 }
             }
     }

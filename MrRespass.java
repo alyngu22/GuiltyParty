@@ -13,12 +13,12 @@ public class MrRespass extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public MrRespass() {
-        super("Mr. Respass", true,true,true,false,false,0);
+        super("Mr. Respass", true,true,true,false,false,6);
         GreenfootImage image = getImage();
         image.scale((int)image.getWidth()/2, (int)image.getHeight()/2); 
     }
     public void act() 
     {
-        // Add your action code here.
+        super.act();
     }    
 }

@@ -13,12 +13,12 @@ public class CaraSobeck extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public CaraSobeck() {
-        super("Cara Sobeck", true,true,false,true,true,5);
+        super("Cara Sobeck", true,true,false,true,true,1);
         GreenfootImage image = getImage();
         image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);
     }
     public void act() 
     {
-        // Add your action code here.
+        super.act();
     }    
 }
