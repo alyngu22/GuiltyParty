@@ -16,6 +16,6 @@ public class NotepadButton extends Button
     {
         if (Greenfoot.mousePressed(this)) {
             Greenfoot.setWorld(new Notepad());
-        }
+        } 
     }    
 }

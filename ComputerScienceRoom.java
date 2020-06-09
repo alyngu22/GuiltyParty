@@ -30,4 +30,5 @@ public class ComputerScienceRoom extends World
         MapButton mapButton = new MapButton();
         addObject(mapButton,58,57);
     }
+    
 }
