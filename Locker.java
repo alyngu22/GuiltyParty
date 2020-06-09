@@ -13,7 +13,7 @@ public class Locker extends Evidence
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public Locker() {
-        super("Locker");
+        super("The lockers in the senior hallway\n\n around commons all seem to be empty. \n\nHuh. Weird.");
     }
     public void act() 
     {

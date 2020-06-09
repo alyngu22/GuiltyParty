@@ -42,7 +42,11 @@ public class DropDownSuspects extends Button
         }    
         public void expand() {
                 for (int i = 0; i < charTagArray.length; i++) {
+                    
                     if (((Notepad)getWorld()).suspectedCollected[i]){
+                        if (charTagArray[i].equals(jaredPadaleckiTag) || charTagArray[i].equals(msGarciaTag)) {
+                            charTagArray[i].isFalse();
+                        }
                         getWorld().addObject(charTagArray[i],150,200 + (i * 50));
                     }
                     else {

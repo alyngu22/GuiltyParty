@@ -13,7 +13,7 @@ public class Lanyard extends Evidence
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public Lanyard() {
-        super("");
+        super("You closely inspect the area around \n\n where the laptop cart was supposed to be. \n\nYou see a small piece of an ID...\n\n This could be it! \n\n Unfortunately, its just a maroon \n\n sophomore ID. \n\n The name and photo is cut off. ");
     }
     public void act() 
     {

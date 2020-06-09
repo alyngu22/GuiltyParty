@@ -29,5 +29,7 @@ public class Gymnasium extends World
 
         MapButton mapButton = new MapButton();
         addObject(mapButton,58,57);
+        MsGarcia msGarcia = new MsGarcia();
+        addObject(msGarcia,1169,451);
     }
 }

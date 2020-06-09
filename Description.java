@@ -26,16 +26,11 @@ public class Description extends Button
     public void lieDetector() {
         if (Greenfoot.mouseMoved(this)) {
             if (isTrue) {
-                setImage(new GreenfootImage(description, 30, Color.GREEN, null));
+                setImage(new GreenfootImage(description, 30, new Color(6,151,64), null));
             }
             else {
                 setImage(new GreenfootImage(description, 30, Color.RED, null));
             }
         }
-       // else {
-       //     setImage(new GreenfootImage(description, 30, null, null));
-
-       // }
-        
     }
 }

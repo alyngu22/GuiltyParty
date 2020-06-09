@@ -24,7 +24,7 @@ public class ClueTag extends Button
             Evidence e = clues[cluesInt];
             getWorld().removeObjects(getWorld().getObjects(Description.class));
             Description d = new Description(e.getDescription(),true);
-            getWorld().addObject(d,1200,350);
+            getWorld().addObject(d,1200,400);
         }
     }
     public void changeImage() {

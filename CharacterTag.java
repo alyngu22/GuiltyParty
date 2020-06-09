@@ -15,7 +15,7 @@ public class CharacterTag extends Button
     public static Characters[] suspects = {new AmeliaRossi(), new CaraSobeck(), new GiannaDavis(), new GraceIvanova(), new JackieBrown(), new JaredPadalecki(), new MrRespass(), new MrsAcuna(), new MsGarcia(), new ThomasLi()};
     public int cInt;
     public boolean available = true;
-    
+    public boolean isTrue; 
     public void act() 
     {
         showDescription();
@@ -24,12 +24,21 @@ public class CharacterTag extends Button
         if (Greenfoot.mouseClicked(this) && available) {
             Characters c = suspects[cInt];
             getWorld().removeObjects(getWorld().getObjects(Description.class));
-            Description d = new Description(c.getDescription(),true);
+            Description d;
+            if (!isTrue) {
+                d = new Description(c.getDescription(), false);
+            }
+            else {
+                d = new Description(c.getDescription(),true);
+            }
             getWorld().addObject(d,1200,350);
         }
     }
     public void changeImage() {
         available = false;
          setImage(new GreenfootImage("NotAvailableTag.png"));
+    }
+    public void isFalse() {
+        isTrue = false;
     }
 }
