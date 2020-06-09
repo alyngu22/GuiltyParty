@@ -14,13 +14,53 @@ public class MainMap extends World
      * 
      */
     static boolean[] visited = new boolean[8];
+    static int count;
+    static int seconds;
+    static int minute;
     public MainMap()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1600, 800, 1); 
         prepare();
+        count = 0;
     }
-
+    public MainMap(int counts)
+    {    
+        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
+        super(1600, 800, 1); 
+        prepare();
+        count = counts;
+    }
+    public void act(){
+        count++;
+        showTime(); 
+        if(minute>=15){
+            Greenfoot.setWorld(new GameOver());
+        }
+    }
+    public void showTime(){
+        seconds = count/55;
+        if(seconds % 60 == 0){
+            minute= seconds/60;
+        }
+        if(seconds>=60){
+            int second = seconds - minute*60;
+            if(second<10){
+                showText(minute+ ":0" +second,50,25);
+            }
+            else{
+                showText(minute+ ":" +second,50,25);
+            }
+        }
+        else{
+            if(seconds<10){
+                showText(minute+ ":0" +seconds,50,25);
+            }
+            else{
+                showText(minute+ ":" +seconds,50,25);
+            }
+        }
+    }
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
