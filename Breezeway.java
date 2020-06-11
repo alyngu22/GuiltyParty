@@ -19,6 +19,9 @@ public class Breezeway extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1600, 800, 1); 
         roomInt = 1;
+        GreenfootImage bg = new GreenfootImage("breezeway.jpg");
+        bg.scale(getWidth(), getHeight());
+        setBackground(bg);
         prepare();
     }
 
