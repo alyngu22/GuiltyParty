@@ -14,6 +14,7 @@ public class CaraSobeck extends Characters
      */
     public CaraSobeck() {
         super("Cara Sobeck", true,true,false,true,true,1);
+        testimony = "Ugh. I can’t believe this happened. \n\n To think! What if the thief got to my \n\n calculator! Or my laptop! Or my $3000 \n\n Swarovski-crystal Heelys?!";
         GreenfootImage image = getImage();
         image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);
     }

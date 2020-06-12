@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Characters extends Actor
 {
     public String name;
+    public String testimony;
     public boolean hasShortHair;
     public boolean isTall;
     public boolean isThin; 
@@ -42,7 +43,9 @@ public class Characters extends Actor
             Notepad.suspectedCollected[charInt] = true;
         }*/
     }   
-    
+    public String getTestimony() {
+        return testimony;
+    }
     /*public boolean canGiveTestimony() {
         if (Greenfoot.mousePressed(this)) {
            getWorld().removeObject(this);

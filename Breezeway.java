@@ -34,5 +34,7 @@ public class Breezeway extends World
 
         MapButton mapButton = new MapButton();
         addObject(mapButton,58,57);
+        GiannaDavis giannaDavis = new GiannaDavis();
+        addObject(giannaDavis,1158,420);
     }
 }

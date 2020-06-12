@@ -14,6 +14,7 @@ public class AmeliaRossi extends Characters
      */
     public AmeliaRossi() {
             super("Amelia Rossi",false,true,true,true,true,0);
+            testimony = "One thing is for sure, it can’t possibly \n\n be Cara. I saw that she was livestreaming \n\n on Instagram Live about her new crystal \n\n Heelys after school.";
             GreenfootImage image = getImage();
             image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);
     }

@@ -32,6 +32,11 @@ public class ComputerScienceRoom extends World
 
         MapButton mapButton = new MapButton();
         addObject(mapButton,58,57);
+        MrRespass mrRespass = new MrRespass();
+        addObject(mrRespass,565,511);
+
+        ThomasLi thomasLi = new ThomasLi();
+        addObject(thomasLi,927,456);
     }
     
 }

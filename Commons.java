@@ -24,6 +24,7 @@ public class Commons extends World
         roomInt = 2;
         prepare();
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -34,6 +35,8 @@ public class Commons extends World
         MapButton mapButton = new MapButton();
         addObject(mapButton,58,57);
         JackieBrown jackieBrown = new JackieBrown();
-        addObject(jackieBrown,1107,229);
+        addObject(jackieBrown,1107,325);
+        Hair hair = new Hair();
+        addObject(hair,604,227);
     }
 }

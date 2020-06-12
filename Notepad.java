@@ -39,6 +39,7 @@ public class Notepad extends World
 
         DropDownClues dropDownClues = new DropDownClues();
         addObject(dropDownClues,330,150);
-        
+        TestimonyFrame testimonyFrame = new TestimonyFrame();
+        addObject(testimonyFrame,442,475);
     }
 }

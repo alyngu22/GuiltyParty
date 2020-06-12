@@ -23,7 +23,7 @@ public class ClueTag extends Button
         if (Greenfoot.mouseClicked(this) && available) {
             Evidence e = clues[cluesInt];
             getWorld().removeObjects(getWorld().getObjects(Description.class));
-            Description d = new Description(e.getDescription(),true);
+            Description d = new Description(e.getDescription());
             getWorld().addObject(d,1200,400);
         }
     }

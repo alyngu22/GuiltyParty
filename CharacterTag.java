@@ -24,14 +24,12 @@ public class CharacterTag extends Button
         if (Greenfoot.mouseClicked(this) && available) {
             Characters c = suspects[cInt];
             getWorld().removeObjects(getWorld().getObjects(Description.class));
-            Description d;
-            if (!isTrue) {
-                d = new Description(c.getDescription(), false);
-            }
-            else {
-                d = new Description(c.getDescription(),true);
-            }
-            getWorld().addObject(d,1200,350);
+            
+            Description d = new Description(c.getDescription());
+            getWorld().addObject(d,1200,350); 
+            
+            Description d1 = new Description(c.getTestimony());
+            getWorld().addObject(d1, 442, 475);
         }
     }
     public void changeImage() {

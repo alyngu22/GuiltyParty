@@ -32,5 +32,11 @@ public class VisualRoom extends World
 
         MapButton mapButton = new MapButton();
         addObject(mapButton,58,57);
+        GraceIvanova graceIvanova = new GraceIvanova();
+        addObject(graceIvanova,1011,430);
+        
+       
+        Hair hair = new Hair();
+        addObject(hair,39,563);
     }
 }

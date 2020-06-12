@@ -14,6 +14,7 @@ public class MsGarcia extends Characters
      */
     public MsGarcia() {
         super("Ms. Garcia", true,true,false,true,false,8);
+        testimony = "Oh no! Isn’t what happened\n\n horrible?! I never would have expected \n\nsomething like this to happen \n\nat BCA!";
         GreenfootImage image = getImage();
         image.scale((int)image.getWidth()/2, (int)image.getHeight()/2); 
     }

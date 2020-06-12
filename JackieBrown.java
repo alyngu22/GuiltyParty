@@ -14,6 +14,7 @@ public class JackieBrown extends Characters
      */
     public JackieBrown() {
         super("Jackie Brown", false,false,false,true,true,4);
+        testimony = " I was in Commons after school working\n\n on an assignment! There’s even proof, because \n\nI signed in and out at a certain time.";
         GreenfootImage image = getImage();
         image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);         
     }

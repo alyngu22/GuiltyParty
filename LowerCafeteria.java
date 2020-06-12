@@ -33,5 +33,7 @@ public class LowerCafeteria extends World
 
         MapButton mapButton = new MapButton();
         addObject(mapButton,58,57);
+        JaredPadalecki jaredPadalecki = new JaredPadalecki();
+        addObject(jaredPadalecki,228,508);
     }
 }

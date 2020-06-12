@@ -14,6 +14,7 @@ public class JaredPadalecki extends Characters
      */
     public JaredPadalecki() {
         super("Jared Padalecki", false,true,true,false,true,5);
+        testimony = "I was at football practice. \n\n Go BCA Knights!";
         GreenfootImage image = getImage();
         image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);        
     }

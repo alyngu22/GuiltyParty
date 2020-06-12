@@ -14,6 +14,8 @@ public class MrsAcuna extends Characters
      */
     public MrsAcuna() {
         super("Mrs. Acuna", true,false,true,true,false,7);
+        testimony = "I saw a suspicious figure coming\n\n out of the girls bathroom right before \n\nthe time of the crime."; 
+
         GreenfootImage image = getImage();
         image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);         
     }

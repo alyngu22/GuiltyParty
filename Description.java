@@ -14,23 +14,8 @@ public class Description extends Button
      */
     public boolean isTrue;
     public String description;
-    public Description(String s, boolean correct) {
+    public Description(String s) {
         description = s;
         setImage(new GreenfootImage(description,30,null,null));
-        isTrue = correct;
-    }
-    public void act() 
-    {
-        lieDetector();   
-    }    
-    public void lieDetector() {
-        if (Greenfoot.mouseMoved(this)) {
-            if (isTrue) {
-                setImage(new GreenfootImage(description, 30, new Color(6,151,64), null));
-            }
-            else {
-                setImage(new GreenfootImage(description, 30, Color.RED, null));
-            }
-        }
-    }
+    }   
 }

@@ -47,12 +47,11 @@ public class DropDownSuspects extends Button
                         if (charTagArray[i].equals(jaredPadaleckiTag) || charTagArray[i].equals(msGarciaTag)) {
                             charTagArray[i].isFalse();
                         }
-                        getWorld().addObject(charTagArray[i],150,200 + (i * 50));
                     }
                     else {
                         charTagArray[i].changeImage();
-                        getWorld().addObject(charTagArray[i], 150, 200 + (i * 50));
                     }
+                    getWorld().addObject(charTagArray[i], 150, 200 + (i * 50));
                 }
                  isExpanded = true;
             }

@@ -14,6 +14,7 @@ public class ThomasLi extends Characters
      */
     public ThomasLi() {
         super("Thomas Li",true,false,true,false,true,9);
+        testimony = "The laptop cart is always plugged\n\n into the charger cords on the ceiling.\n\n I’m too short to reach it."; ;
         GreenfootImage image = getImage();
         image.scale((int)image.getWidth()/2, (int)image.getHeight()/2); 
     }

@@ -14,6 +14,7 @@ public class MrRespass extends Characters
      */
     public MrRespass() {
         super("Mr. Respass", true,true,true,false,false,6);
+        testimony = "It couldn’t be me. At that time, \n\n I was at home tending to my bees.";
         GreenfootImage image = getImage();
         image.scale((int)image.getWidth()/2, (int)image.getHeight()/2); 
     }
