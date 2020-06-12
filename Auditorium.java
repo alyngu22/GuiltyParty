@@ -19,6 +19,9 @@ public class Auditorium extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1600, 800, 1); 
         roomInt = 0;
+        GreenfootImage bg = new GreenfootImage("auditorium.jpeg");
+        bg.scale(getWidth(), getHeight());
+        setBackground(bg);
         prepare();
         
     }
