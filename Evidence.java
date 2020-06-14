@@ -21,6 +21,7 @@ public class Evidence extends Actor
     {
         if (Greenfoot.mousePressed(this)) {
             Notepad.cluesCollected[eNum] = true;
+            getWorld().removeObject(this);
         }
     }
     public String getDescription() {
