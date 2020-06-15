@@ -36,7 +36,5 @@ public class Commons extends World
         addObject(mapButton,58,57);
         JackieBrown jackieBrown = new JackieBrown();
         addObject(jackieBrown,1107,325);
-        Hair hair = new Hair();
-        addObject(hair,604,227);
     }
 }
