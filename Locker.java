@@ -14,9 +14,10 @@ public class Locker extends Evidence
      */
     public Locker() {
         super("The lockers in the senior hallway\n\n around commons all seem to be empty. \n\nHuh. Weird.");
+        eNum = 2;
     }
     public void act() 
     {
-        // Add your action code here.
+        super.act();
     }    
 }

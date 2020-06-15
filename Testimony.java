@@ -16,7 +16,7 @@ public class Testimony extends Button
     public String description;
     public Testimony(String s, boolean correct) {
         description = s;
-        setImage(new GreenfootImage(description,30,null,null));
+        setImage(new GreenfootImage(description,25,null,null));
         isTrue = correct;
     }
     public void act() 
@@ -26,10 +26,10 @@ public class Testimony extends Button
     public void lieDetector() {
         if (Greenfoot.mouseMoved(this)) {
             if (isTrue) {
-                setImage(new GreenfootImage(description, 30, new Color(6,151,64), null));
+                setImage(new GreenfootImage(description, 25, new Color(6,151,64), null));
             }
             else {
-                setImage(new GreenfootImage(description, 30, Color.RED, null));
+                setImage(new GreenfootImage(description, 25, Color.RED, null));
             }
         }
     }

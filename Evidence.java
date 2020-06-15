@@ -21,11 +21,23 @@ public class Evidence extends Actor
     {
         if (Greenfoot.mousePressed(this)) {
             Notepad.cluesCollected[eNum] = true;
-            getWorld().removeObject(this);
+            giveTestimony();        
         }
     }
     public String getDescription() {
         String s = description;
         return s;
+    }
+    public void giveTestimony(){
+        DropDownClues d = new DropDownClues();
+        ClueTag cluetag = d.getTag(eNum);
+        Description d1 = new Description(this.getDescription());
+        TestimonyFrame frame = new TestimonyFrame(1);
+        OKButton ok = new OKButton();
+        Notepad.cluesCollected[eNum] = true;
+        getWorld().addObject(frame, 900,360);
+        getWorld().addObject(cluetag, 642, 120);
+        getWorld().addObject(d1, 900, 360);
+        getWorld().addObject(ok, 1200, 600);
     }
 }

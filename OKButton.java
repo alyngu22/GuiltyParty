@@ -25,7 +25,10 @@ public class OKButton extends Button
     public void isPressed(){
         getWorld().removeObjects(getWorld().getObjects(Description.class)); 
         getWorld().removeObjects(getWorld().getObjects(TestimonyFrame.class));
+        getWorld().removeObjects(getWorld().getObjects(ClueTag.class));
         getWorld().removeObjects(getWorld().getObjects(CharacterTag.class));
+        getWorld().removeObjects(getWorld().getObjects(Testimony.class));
+
         getWorld().removeObject(this);
     }
 }

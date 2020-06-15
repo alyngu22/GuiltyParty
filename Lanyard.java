@@ -14,9 +14,10 @@ public class Lanyard extends Evidence
      */
     public Lanyard() {
         super("You closely inspect the area around \n\n where the laptop cart was supposed to be. \n\nYou see a small piece of an ID...\n\n This could be it! \n\n Unfortunately, its just a maroon \n\n sophomore ID. \n\n The name and photo is cut off. ");
+        eNum = 1;
     }
     public void act() 
     {
-        // Add your action code here.
+        super.act();
     }    
 }

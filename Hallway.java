@@ -35,6 +35,7 @@ public class Hallway extends World
         addObject(mapButton,58,57);
         MrsAcuna mrsAcuna = new MrsAcuna();
         addObject(mrsAcuna,1041,482);
+        
         Locker locker = new Locker();
         addObject(locker,165,578);
     }

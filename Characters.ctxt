@@ -12,5 +12,4 @@ comment4.params=
 comment4.target=java.lang.String\ getTestimony()
 comment5.params=
 comment5.target=java.lang.String\ getDescription()
-comment5.text=public\ boolean\ canGiveTestimony()\ {\r\n\ \ \ \ \ \ \ \ if\ (Greenfoot.mousePressed(this))\ {\r\n\ \ \ \ \ \ \ \ \ \ \ getWorld().removeObject(this);\r\n\ \ \ \ \ \ \ \ \ \ \ return\ true;\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ return\ false;\r\n}
 numComments=6

@@ -49,5 +49,8 @@ public class DropDownClues extends Button
                     getWorld().removeObject(cluesTagArray[i]);
                 }
             }
+        public ClueTag getTag(int c){
+            return cluesTagArray[c];
+        }
     }
     

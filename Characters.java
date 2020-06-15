@@ -44,25 +44,25 @@ public class Characters extends Actor
     public void giveTestimony(){
         DropDownSuspects d = new DropDownSuspects();
         CharacterTag chartag = d.getTag(charInt);
-        Description d1 = new Description(this.getTestimony());
-        TestimonyFrame frame = new TestimonyFrame();
+        Testimony t;
+        if (charInt == 5 || charInt == 8) {
+            t = new Testimony(this.getTestimony(), false);
+        }
+        else {
+            t = new Testimony(this.getTestimony(),true);
+        }
+        TestimonyFrame frame = new TestimonyFrame(1);
         OKButton ok = new OKButton();
         Notepad.suspectedCollected[charInt] = true;
         getWorld().addObject(frame, 900,360);
         getWorld().addObject(chartag, 642, 120);
-        getWorld().addObject(d1, 900, 360);
+        getWorld().addObject(t, 900, 360);
         getWorld().addObject(ok, 1200, 600);
     }
     public String getTestimony() {
         return testimony;
+        
     }
-    /*public boolean canGiveTestimony() {
-        if (Greenfoot.mousePressed(this)) {
-           getWorld().removeObject(this);
-           return true;
-        }
-        return false;
-    }*/
     
     
     public String getDescription() {

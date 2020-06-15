@@ -83,6 +83,8 @@ public class MainMap extends World
         addObject(lowerCafeteriaClick,704,294);
         VisualRoomClick visualRoomClick = new VisualRoomClick();
         addObject(visualRoomClick,454,338);
+        HallwayClick hallwayClick = new HallwayClick();
+        addObject(hallwayClick,636,470);
         NotepadButton notepadButton = new NotepadButton();
         addObject(notepadButton,1509,714);
 
@@ -113,7 +115,6 @@ public class MainMap extends World
         Suspect suspect10 = new Suspect();
         addObject(suspect10,66,641);
 
-        HallwayClick hallwayClick = new HallwayClick();
-        addObject(hallwayClick,636,470);
+        
     } 
 }
