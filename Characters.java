@@ -16,9 +16,7 @@ public class Characters extends Actor
     public boolean isFemale;
     public boolean isStudent;
     public int charInt; 
-    
     static protected boolean[] hasGivenTestimony = new boolean[10];
-    
     /**
      * Act - do whatever the Characters wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -34,15 +32,27 @@ public class Characters extends Actor
     }
     public void act() 
     {
+            
         if (Greenfoot.mousePressed(this)) {
-            Notepad.suspectedCollected[charInt] = true;
-            getWorld().removeObject(this);
+            giveTestimony();
         }
         /*if (canGiveTestimony()) {
             giveTestimony();
             Notepad.suspectedCollected[charInt] = true;
         }*/
-    }   
+    }
+    public void giveTestimony(){
+        DropDownSuspects d = new DropDownSuspects();
+        CharacterTag chartag = d.getTag(charInt);
+        Description d1 = new Description(this.getTestimony());
+        TestimonyFrame frame = new TestimonyFrame();
+        OKButton ok = new OKButton();
+        Notepad.suspectedCollected[charInt] = true;
+        getWorld().addObject(frame, 900,360);
+        getWorld().addObject(chartag, 642, 120);
+        getWorld().addObject(d1, 900, 360);
+        getWorld().addObject(ok, 1200, 600);
+    }
     public String getTestimony() {
         return testimony;
     }
