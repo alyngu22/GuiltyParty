@@ -60,5 +60,8 @@ public class DropDownSuspects extends Button
                     getWorld().removeObject(charTagArray[i]);
                 }
             }
+        public CharacterTag getTag(int c){
+            return charTagArray[c];
+        }
     }
     

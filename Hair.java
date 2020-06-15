@@ -14,6 +14,8 @@ public class Hair extends Evidence
      */
     public Hair() {
         super("You find an empty laptop cart in\n\n the Visual Room. You realize its the same \n\nlaptop cart that was stolen before-- except\n\n its empty now. You look around and \n\nsee a short hair stuck on the cart.");
+        GreenfootImage image = getImage();
+        image.scale((int)image.getWidth()/5, (int)image.getHeight()/5);
     }
     public void act() 
     {
