@@ -16,10 +16,20 @@ public class CharacterTag extends Button
     public int cInt;
     public boolean available = true;
     public boolean isTrue = true; 
+    public boolean accused = false;
+   
     public void act() 
     {
-        showDescription();
-    }    
+        if (!accused) {
+            showDescription();
+        }
+        else {
+            if (Greenfoot.mouseClicked(this)) {
+                MainMap.accusedChar = this;
+            }
+        }
+        
+    }
     public void showDescription() {
         if (Greenfoot.mouseClicked(this) && available) {
             Characters c = suspects[cInt];

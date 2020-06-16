@@ -34,13 +34,13 @@ public class DropDownClues extends Button
         }    
         public void expand() {
                 for (int i = 0; i < cluesTagArray.length; i++) {
-                    //if (((Notepad)getWorld()).cluesCollected[i]){
+                    if (((Notepad)getWorld()).cluesCollected[i]){
                         getWorld().addObject(cluesTagArray[i],330,200 + (i * 50));
-                  //  }
-                   // else {
-                    //    cluesTagArray[i].changeImage();
-                    //    getWorld().addObject(cluesTagArray[i], 330, 200 + (i * 50));
-                   // }
+                    }
+                    else {
+                        cluesTagArray[i].changeImage();
+                        getWorld().addObject(cluesTagArray[i], 330, 200 + (i * 50));
+                    }
                 }
                  isExpanded = true;
             }

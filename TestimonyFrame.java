@@ -16,6 +16,12 @@ public class TestimonyFrame extends Actor
         if (num == 1) {
             setImage(new GreenfootImage("Frame2.png"));
         }
+        if (num == 2) {
+            setImage(new GreenfootImage("Frame3.png"));
+        }
+        if (num == 3) {
+            setImage(new GreenfootImage("Frame1.png"));
+        }
     }
     public TestimonyFrame() {
         this(0);

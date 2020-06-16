@@ -36,7 +36,8 @@ public class VisualRoom extends World
         addObject(graceIvanova,1011,430);
         LaptopCart cart = new LaptopCart();
         addObject(cart,700,490);
+
         Hair hair = new Hair();
-        addObject(hair,695,500);
+        addObject(hair,689,455);
     }
 }

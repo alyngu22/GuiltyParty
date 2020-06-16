@@ -13,10 +13,11 @@ public class MainMap extends World
      * Constructor for objects of class MainMap.
      * 
      */
-    static boolean[] visited = new boolean[8];
+    static boolean[]visited = new boolean[8];
     static int count;
     static int seconds;
     static int minute;
+    public static CharacterTag accusedChar; 
     public MainMap()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -37,6 +38,24 @@ public class MainMap extends World
         if(minute>=15){
             Greenfoot.setWorld(new GameOver());
         }
+        addAccusationButton();
+    }
+    public void addAccusationButton() {
+        boolean canAdd = true;
+        for (boolean b: Notepad.cluesCollected) {
+            if (!b) {
+                canAdd = false;
+            }
+        }
+        for (boolean b:  Notepad.cluesCollected) {
+            if (!b) {
+                canAdd = false;
+            }
+        }
+        if (canAdd) {
+            addObject(new AccusationButton(), 1309,714);
+        }
+        
     }
     public void showTime(){
         seconds = count/55;
@@ -114,7 +133,7 @@ public class MainMap extends World
         addObject(suspect9,1020,192);
         Suspect suspect10 = new Suspect();
         addObject(suspect10,66,641);
-
+        addObject(new AccusationButton(), 1369,714);
         
     } 
 }

@@ -36,5 +36,7 @@ public class Commons extends World
         addObject(mapButton,58,57);
         JackieBrown jackieBrown = new JackieBrown();
         addObject(jackieBrown,1107,325);
+        Lanyard lanyard = new Lanyard();
+        addObject(lanyard,449,566);
     }
 }

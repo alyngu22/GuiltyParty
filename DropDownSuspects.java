@@ -16,7 +16,7 @@ public class DropDownSuspects extends Button
            public boolean isExpanded = false;
             AmeliaRossiTag ameliaRossiTag = new AmeliaRossiTag();
             CaraSobeckTag caraSobeckTag = new CaraSobeckTag();
-            GiannaDavisTag giannaDavisTag = new GiannaDavisTag();
+            public static GiannaDavisTag giannaDavisTag = new GiannaDavisTag();
             GraceIvanovaTag graceIvanovaTag = new GraceIvanovaTag();
             JackieBrownTag jackieBrownTag = new JackieBrownTag();
             JaredPadaleckiTag jaredPadaleckiTag = new JaredPadaleckiTag();
@@ -25,10 +25,20 @@ public class DropDownSuspects extends Button
             MsGarciaTag msGarciaTag = new MsGarciaTag();
             ThomasLiTag thomasLiTag = new ThomasLiTag();
             public CharacterTag[] charTagArray = {ameliaRossiTag, caraSobeckTag, giannaDavisTag, graceIvanovaTag, jackieBrownTag, jaredPadaleckiTag, mrRespassTag, mrsAcunaTag, msGarciaTag,thomasLiTag};
-
+            public int x;
+            public int y;
                
 
-
+        public DropDownSuspects(int x, int y) {
+            this.x = x;
+            this.y = y;
+            for (CharacterTag cT: charTagArray) {
+                cT.accused = true;
+            }
+        }
+        public DropDownSuspects() {
+            this(150,200);
+        }
         public void act() 
         {
             if (Greenfoot.mouseClicked(this)) {
@@ -43,7 +53,7 @@ public class DropDownSuspects extends Button
         public void expand() {
                 for (int i = 0; i < charTagArray.length; i++) {
                     
-                    if (((Notepad)getWorld()).suspectedCollected[i]){
+                    if (Notepad.suspectedCollected[i]){
                         if (charTagArray[i].equals(jaredPadaleckiTag) || charTagArray[i].equals(msGarciaTag)) {
                             charTagArray[i].isFalse();
                         }
@@ -51,7 +61,7 @@ public class DropDownSuspects extends Button
                     else {
                         charTagArray[i].changeImage();
                     }
-                    getWorld().addObject(charTagArray[i], 150, 200 + (i * 50));
+                    getWorld().addObject(charTagArray[i], x, y + (i * 50));
                 }
                  isExpanded = true;
             }

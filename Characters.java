@@ -36,10 +36,7 @@ public class Characters extends Actor
         if (Greenfoot.mousePressed(this)) {
             giveTestimony();
         }
-        /*if (canGiveTestimony()) {
-            giveTestimony();
-            Notepad.suspectedCollected[charInt] = true;
-        }*/
+        
     }
     public void giveTestimony(){
         DropDownSuspects d = new DropDownSuspects();
