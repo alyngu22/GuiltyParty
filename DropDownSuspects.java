@@ -37,8 +37,8 @@ public class DropDownSuspects extends Button
             }
         }
         public DropDownSuspects() {
-            this.x = x;
-            this.y = y;
+            this.x = 150;
+            this.y = 200;
         }
         public void act() 
         {
@@ -48,6 +48,7 @@ public class DropDownSuspects extends Button
                 }
                 else {
                     collapse();
+                    isExpanded = false;
                 }
             }
         }    
@@ -60,7 +61,7 @@ public class DropDownSuspects extends Button
                         }
                     }
                     else {
-                        charTagArray[i].changeImage();
+                        charTagArray[i].notAvailable();
                     }
                     getWorld().addObject(charTagArray[i], x, y + (i * 50));
                 }

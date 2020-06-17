@@ -53,7 +53,7 @@ public class Submit extends Actor
                         DropDownSuspects.thomasLiTag.cleared();
                         DropDownSuspects.jackieBrownTag.cleared();
                         getWorld().removeObjects(getWorld().getObjects(Description.class));
-                        getWorld().addObject(new Description("That's just a coincidence! What about Cara Sobeck?"), 685, 300);
+                        getWorld().addObject(new Description("That's just a coincidence!\n\n What about Cara Sobeck?"), 685, 300);
                         round++;
                     }
                     else {

@@ -31,6 +31,7 @@ public class Evidence extends Actor
     public void giveTestimony(){
         DropDownClues d = new DropDownClues();
         ClueTag cluetag = d.getTag(eNum);
+        cluetag.revertImage();
         Description d1 = new Description(this.getDescription());
         TestimonyFrame frame = new TestimonyFrame(1);
         OKButton ok = new OKButton();

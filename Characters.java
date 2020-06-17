@@ -47,6 +47,7 @@ public class Characters extends Actor
     public void giveTestimony(){
         DropDownSuspects d = new DropDownSuspects();
         CharacterTag chartag = d.getTag(charInt);
+        chartag.revertImage();
         this.setImage(img);
         this.setLocation(300, 600);
         Testimony t;
@@ -56,6 +57,7 @@ public class Characters extends Actor
         else {
             t = new Testimony(this.getTestimony(),true);
         }
+        
         TestimonyFrame frame = new TestimonyFrame(1);
         OKButton ok = new OKButton(getTestimony());
         Notepad.suspectedCollected[charInt] = true;

@@ -18,6 +18,7 @@ public class CharacterTag extends Button
     public boolean isTrue = true; 
     public boolean accused = false;
     public boolean isClicked = false;
+    public static GreenfootImage[] original = {new GreenfootImage("AmeliaRossiTag.png"), new GreenfootImage("CaraSobeckTag.png"), new GreenfootImage("GiannaDavisTag.png"), new GreenfootImage("GraceIvanovaTag.png"), new GreenfootImage("JackieBrownTag.png"), new GreenfootImage("JaredPadaleckiTag.png"), new GreenfootImage("MrRespassTag.png"), new GreenfootImage("MrsAcunaTag.png"), new GreenfootImage("MsGarciaTag.png"), new GreenfootImage("ThomasLiTag.png")};
     
     public void act() 
     {
@@ -45,9 +46,13 @@ public class CharacterTag extends Button
             getWorld().addObject(t,506,548);
         }
     }
-    public void changeImage() {
+    public void notAvailable() {
         available = false;
         setImage(new GreenfootImage("NotAvailableTag.png"));
+    }
+    public void revertImage() {
+        available = true;
+        setImage(original[cInt]);
     }
     public void cleared() {
         available = false;

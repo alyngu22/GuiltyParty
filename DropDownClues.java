@@ -38,18 +38,19 @@ public class DropDownClues extends Button
                 }
                 else {
                     collapse();
+                    isExpanded = false;
                 }
             }
         }    
         public void expand() {
                 for (int i = 0; i < cluesTagArray.length; i++) {
-                    if (Notepad.cluesCollected[i]){
-                        getWorld().addObject(cluesTagArray[i],x,y + (i * 50));
-                    }
-                    else {
+                    if (!Notepad.cluesCollected[i]){
+                      
                         cluesTagArray[i].changeImage();
-                        getWorld().addObject(cluesTagArray[i], x, y + (i * 50));
                     }
+                    cluesTagArray[i].isAccused = true;
+                    getWorld().addObject(cluesTagArray[i], x, y + (i * 50));
+                    
                 }
                  isExpanded = true;
             }

@@ -9,15 +9,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class ClueTag extends Button
 {
     public static Evidence[] clues = {new Hair(), new Lanyard(), new Locker()};
+    public static GreenfootImage[] original = {new GreenfootImage("HairTag.png"), new GreenfootImage("LanyardTag.png"), new GreenfootImage("LockerTag.png")};
     public int cluesInt;
-    public final boolean available = true;
+    public boolean available = true;
+    public boolean isAccused = false;
     /**
      * Act - do whatever the ClueTag wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
     {
-        showDescription();
+        if (!isAccused) {    
+            showDescription();
+        }
         if (Greenfoot.mouseClicked(this)) {
             AccusationRoom.clickedClue = this;
         }
@@ -31,7 +35,11 @@ public class ClueTag extends Button
         }
     }
     public void changeImage() {
-       // available = false;
-       //  setImage(new GreenfootImage("NotAvailableTag.png"));
+       available = false;
+       setImage(new GreenfootImage("NotAvailableTag.png"));
+    }
+    public void revertImage() {
+        available = true;
+        setImage(original[cluesInt]);
     }
 }

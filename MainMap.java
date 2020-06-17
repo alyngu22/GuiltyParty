@@ -47,7 +47,7 @@ public class MainMap extends World
                 canAdd = false;
             }
         }
-        for (boolean b:  Notepad.cluesCollected) {
+        for (boolean b:  Notepad.suspectedCollected) {
             if (!b) {
                 canAdd = false;
             }

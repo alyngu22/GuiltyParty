@@ -20,7 +20,7 @@ public class Notepad extends World
         super(1600, 800, 1); 
         prepare(); 
         
-    }
+    } 
 
     /**
      * Prepare the world for the start of the program.

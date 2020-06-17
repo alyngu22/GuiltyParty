@@ -15,7 +15,7 @@ public class Instruction extends Button
     public void act() 
     {
         if (Greenfoot.mousePressed(this)) {
-            Greenfoot.setWorld(new Blank());
+            Greenfoot.setWorld(new Blank(0));
         }
     }    
 }

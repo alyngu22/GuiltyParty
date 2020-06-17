@@ -17,9 +17,8 @@ public class Credit extends Button
     }
     public void act() 
     {if(Greenfoot.mousePressed(this)){
-            Greenfoot.setWorld(new Blank());
-            Description d = new Description("Creators: Alyssa Nguyen and Isabel Ting.\n\nInspired by Wii Guilty Party.\n\nCharacters: Isabel Ting\n\nBackgrounds: Google.\n\nThank you for playing!"); 
-            getWorld().addObject(d, 800, 400);
+            Greenfoot.setWorld(new Blank(1));
+            
         }
         
     }    

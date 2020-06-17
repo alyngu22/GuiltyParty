@@ -28,7 +28,7 @@ public class Testimony extends Button
             if (isTrue) {
                 setImage(new GreenfootImage(description, 25, new Color(6,151,64), null));
             }
-            else {
+            else { 
                 setImage(new GreenfootImage(description, 25, Color.RED, null));
             }
         }
