@@ -16,6 +16,6 @@ public class Description extends Button
     public String description;
     public Description(String s) {
         description = s;
-        setImage(new GreenfootImage(description,30,null,null));
+        setImage(new GreenfootImage(description,30,Color.BLACK,Color.WHITE));
     }   
 }
