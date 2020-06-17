@@ -13,14 +13,21 @@ public class MapButton extends Button
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     static int counts;
+    public int co;
+    public MapButton(int c){
+        co  = c;
+    }
     public void act() 
     {
         counts++;
         if(counts>=49500){
             Greenfoot.setWorld(new GameOver());
         }
-        if (Greenfoot.mousePressed(this)) {
+        if (Greenfoot.mousePressed(this)&&co == 1) {
             Greenfoot.setWorld(new MainMap(counts));
+        }
+        else if (Greenfoot.mousePressed(this)&&co == 2) {
+            Greenfoot.setWorld(new AccusationRoom());
         }
     }    
 }

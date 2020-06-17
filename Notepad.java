@@ -14,6 +14,7 @@ public class Notepad extends World
      * Constructor for objects of class Notepad.
      * 
      */
+    public int which;
     public Notepad()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -21,7 +22,14 @@ public class Notepad extends World
         prepare(); 
         
     } 
-
+    
+    public Notepad(int wh){
+         super(1600, 800, 1);   
+          which = wh;
+         
+          prepare(); 
+          }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -29,7 +37,7 @@ public class Notepad extends World
     private void prepare()
     {
 
-        MapButton mapButton = new MapButton();
+        MapButton mapButton = new MapButton(which);
         addObject(mapButton,58,57);
         Note note = new Note();
         addObject(note,1200,400);

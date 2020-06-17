@@ -84,6 +84,9 @@ public class MainMap extends World
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
      */
+    public int getCount(){
+        return count;
+    }
     private void prepare()
     {
         Title title = new Title();
@@ -104,9 +107,10 @@ public class MainMap extends World
         addObject(visualRoomClick,454,338);
         HallwayClick hallwayClick = new HallwayClick();
         addObject(hallwayClick,636,470);
-        NotepadButton notepadButton = new NotepadButton();
+        NotepadButton notepadButton = new NotepadButton(1);
         addObject(notepadButton,1509,714);
-
+        //NotepadButton notepadButton = new NotepadButton(1);
+        //addObject(notepadButton,1509,714);
         Clue clues = new Clue();
         addObject(clues,1015,570);
         Suspect suspect = new Suspect();

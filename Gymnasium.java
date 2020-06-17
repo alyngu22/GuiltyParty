@@ -30,7 +30,7 @@ public class Gymnasium extends World
     private void prepare()
     {
 
-        MapButton mapButton = new MapButton();
+        MapButton mapButton = new MapButton(1);
         addObject(mapButton,58,57);
         MsGarcia msGarcia = new MsGarcia();
         addObject(msGarcia,1169,451);

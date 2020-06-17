@@ -21,6 +21,7 @@ public class ConfirmAccuseButton extends Button
                 if (MainMap.accusedChar.equals(DropDownSuspects.giannaDavisTag)) {
                     getWorld().addObject(new Description("That's right! Now you have to prove it!"), 900, 400);
                     Greenfoot.delay(10);
+                    //MainMap world = getWorld();
                     Greenfoot.setWorld(new AccusationRoom());
                 }
                 else {

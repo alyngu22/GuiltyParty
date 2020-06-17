@@ -33,7 +33,7 @@ public class Auditorium extends World
     private void prepare()
     {
 
-        MapButton mapButton = new MapButton();
+        MapButton mapButton = new MapButton(1);
         addObject(mapButton,58,57);
 
         AmeliaRossi ameliaRossi = new AmeliaRossi();

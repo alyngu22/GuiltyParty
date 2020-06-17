@@ -31,7 +31,7 @@ public class Hallway extends World
     private void prepare()
     {
 
-        MapButton mapButton = new MapButton();
+        MapButton mapButton = new MapButton(1);
         addObject(mapButton,58,57);
         MrsAcuna mrsAcuna = new MrsAcuna();
         addObject(mrsAcuna,1041,482);

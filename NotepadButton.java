@@ -12,10 +12,14 @@ public class NotepadButton extends Button
      * Act - do whatever the NotepadButton wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    public int which;
+    public NotepadButton(int n){
+       which = n;
+    }
     public void act() 
     {
         if (Greenfoot.mousePressed(this) ) {
-            Greenfoot.setWorld(new Notepad());
+            Greenfoot.setWorld(new Notepad(which));
         } 
     }    
 }

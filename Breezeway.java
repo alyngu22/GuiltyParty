@@ -32,7 +32,7 @@ public class Breezeway extends World
     private void prepare()
     {
 
-        MapButton mapButton = new MapButton();
+        MapButton mapButton = new MapButton(1);
         addObject(mapButton,58,57);
         GiannaDavis giannaDavis = new GiannaDavis();
         addObject(giannaDavis,1158,420);

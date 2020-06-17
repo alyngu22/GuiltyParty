@@ -15,7 +15,13 @@ public class AccusationRoom extends World
      */
     public static CharacterTag clickedChar; 
     public static ClueTag clickedClue;
-
+    static int count;
+    public AccusationRoom(int counts){
+        super(1600, 800, 1); 
+        count = counts;
+        prepare();
+        interrogation();
+    }
     public AccusationRoom()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
@@ -45,8 +51,8 @@ public class AccusationRoom extends World
         addObject(dropDownClues,1254,179);
         Submit submit = new Submit();
         addObject(submit,697,648);
-        //NotepadButton notepadButton = new NotepadButton();
-        //addObject(notepadButton,1509,714);
+        NotepadButton notepadButton = new NotepadButton(2);
+        addObject(notepadButton,1509,714);
         
     }
     

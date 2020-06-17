@@ -30,7 +30,7 @@ public class VisualRoom extends World
     private void prepare()
     {
 
-        MapButton mapButton = new MapButton();
+        MapButton mapButton = new MapButton(1);
         addObject(mapButton,58,57);
         GraceIvanova graceIvanova = new GraceIvanova();
         addObject(graceIvanova,1011,430);
