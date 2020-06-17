@@ -13,7 +13,7 @@ public class GraceIvanova extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public GraceIvanova() {
-        super("Grace Ivanova", true,false,false,true,true,3);
+        super("Grace Ivanova", true,false,false,true,true,3, "grace.png");
         testimony = "I was in the parking lot with \n\n Padalecki after school and everyone was gone, \n\n just doing nothing and I saw someone running by. \n\n I didn’t register anything except that they \n\n looked really thin and fit.";
         GreenfootImage image = getImage();
         image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);        

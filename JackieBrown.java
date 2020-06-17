@@ -13,7 +13,7 @@ public class JackieBrown extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public JackieBrown() {
-        super("Jackie Brown", false,false,false,true,true,4);
+        super("Jackie Brown", false,false,false,true,true,4, "jackie.png");
         testimony = " I was in Commons after school working\n\n on an assignment! There’s even proof, because \n\nI signed in and out at a certain time.";
         GreenfootImage image = getImage();
         image.scale((int)image.getWidth()/2, (int)image.getHeight()/2);         

@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.List;
 /**
  * Write a description of class Characters here.
  * 
@@ -16,12 +16,14 @@ public class Characters extends Actor
     public boolean isFemale;
     public boolean isStudent;
     public int charInt; 
+    public String img;
+    public boolean k = false;
     static protected boolean[] hasGivenTestimony = new boolean[10];
     /**
      * Act - do whatever the Characters wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public Characters(String name, boolean hair, boolean height, boolean weight, boolean gender, boolean position, int num) {
+    public Characters(String name, boolean hair, boolean height, boolean weight, boolean gender, boolean position, int num, String image) {
         this.name = name;
         hasShortHair = hair;
         isTall = height;
@@ -29,6 +31,7 @@ public class Characters extends Actor
         isFemale = gender;
         isStudent = position;
         charInt = num;
+        img= image;
     }
     public void act() 
     {
@@ -36,11 +39,16 @@ public class Characters extends Actor
         if (Greenfoot.mousePressed(this)) {
             giveTestimony();
         }
-        
+        List<OKButton> list= getWorld().getObjects(OKButton.class);
+        if(list.size() == 0&&k){
+            getWorld().removeObject(this);
+        }
     }
     public void giveTestimony(){
         DropDownSuspects d = new DropDownSuspects();
         CharacterTag chartag = d.getTag(charInt);
+        this.setImage(img);
+        this.setLocation(300, 600);
         Testimony t;
         if (charInt == 5 || charInt == 8) {
             t = new Testimony(this.getTestimony(), false);
@@ -49,19 +57,18 @@ public class Characters extends Actor
             t = new Testimony(this.getTestimony(),true);
         }
         TestimonyFrame frame = new TestimonyFrame(1);
-        OKButton ok = new OKButton();
+        OKButton ok = new OKButton(getTestimony());
         Notepad.suspectedCollected[charInt] = true;
         getWorld().addObject(frame, 900,360);
         getWorld().addObject(chartag, 642, 120);
         getWorld().addObject(t, 900, 360);
         getWorld().addObject(ok, 1200, 600);
+        k = true;
     }
     public String getTestimony() {
         return testimony;
         
     }
-    
-    
     public String getDescription() {
         String s = "";
         s += name;

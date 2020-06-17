@@ -13,7 +13,7 @@ public class MrRespass extends Characters
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public MrRespass() {
-        super("Mr. Respass", true,true,true,false,false,6);
+        super("Mr. Respass", true,true,true,false,false,6, "respass.png");
         testimony = "It couldn’t be me. At that time, \n\n I was at home tending to my bees.";
         GreenfootImage image = getImage();
         image.scale((int)image.getWidth()/2, (int)image.getHeight()/2); 

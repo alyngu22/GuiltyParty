@@ -1,5 +1,4 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
 /**
  * Write a description of class OKButton here.
  * 
@@ -8,11 +7,17 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class OKButton extends Button
 {
+    public String test;
     /**
      * Act - do whatever the OKButton wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public OKButton(){
+        GreenfootImage image = this.getImage();
+        image.scale(image.getWidth()/4, image.getHeight()/4);
+    }
+    public OKButton(String testimony){
+        test = testimony;
         GreenfootImage image = this.getImage();
         image.scale(image.getWidth()/4, image.getHeight()/4);
     }
@@ -28,7 +33,6 @@ public class OKButton extends Button
         getWorld().removeObjects(getWorld().getObjects(ClueTag.class));
         getWorld().removeObjects(getWorld().getObjects(CharacterTag.class));
         getWorld().removeObjects(getWorld().getObjects(Testimony.class));
-
         getWorld().removeObject(this);
     }
 }
