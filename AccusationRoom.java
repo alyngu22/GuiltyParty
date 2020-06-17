@@ -45,8 +45,8 @@ public class AccusationRoom extends World
         addObject(dropDownClues,1254,179);
         Submit submit = new Submit();
         addObject(submit,697,648);
-        NotepadButton notepadButton = new NotepadButton();
-        addObject(notepadButton,1509,714);
+        //NotepadButton notepadButton = new NotepadButton();
+        //addObject(notepadButton,1509,714);
         
     }
     
