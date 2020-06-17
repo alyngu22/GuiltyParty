@@ -17,7 +17,8 @@ public class CharacterTag extends Button
     public boolean available = true;
     public boolean isTrue = true; 
     public boolean accused = false;
-   
+    public boolean isClicked = false;
+    
     public void act() 
     {
         if (!accused) {
@@ -26,6 +27,7 @@ public class CharacterTag extends Button
         else {
             if (Greenfoot.mouseClicked(this)) {
                 MainMap.accusedChar = this;
+                AccusationRoom.clickedChar = this;
             }
         }
         
@@ -45,9 +47,18 @@ public class CharacterTag extends Button
     }
     public void changeImage() {
         available = false;
-         setImage(new GreenfootImage("NotAvailableTag.png"));
+        setImage(new GreenfootImage("NotAvailableTag.png"));
+    }
+    public void cleared() {
+        available = false;
+        setImage(new GreenfootImage("RedTag" + cInt + ".png"));
     }
     public void isFalse() {
         isTrue = false;
+    }
+    public void clicked() {
+        if (Greenfoot.mousePressed(this)) {
+            isClicked = true;
+        }
     }
 }

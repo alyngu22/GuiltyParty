@@ -10,7 +10,7 @@ public class ClueTag extends Button
 {
     public static Evidence[] clues = {new Hair(), new Lanyard(), new Locker()};
     public int cluesInt;
-    public boolean available = true;
+    public final boolean available = true;
     /**
      * Act - do whatever the ClueTag wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
@@ -18,6 +18,9 @@ public class ClueTag extends Button
     public void act() 
     {
         showDescription();
+        if (Greenfoot.mouseClicked(this)) {
+            AccusationRoom.clickedClue = this;
+        }
     }
     public void showDescription() {
         if (Greenfoot.mouseClicked(this) && available) {
@@ -28,7 +31,7 @@ public class ClueTag extends Button
         }
     }
     public void changeImage() {
-        available = false;
-         setImage(new GreenfootImage("NotAvailableTag.png"));
+       // available = false;
+       //  setImage(new GreenfootImage("NotAvailableTag.png"));
     }
 }

@@ -14,16 +14,16 @@ public class DropDownSuspects extends Button
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
            public boolean isExpanded = false;
-            AmeliaRossiTag ameliaRossiTag = new AmeliaRossiTag();
-            CaraSobeckTag caraSobeckTag = new CaraSobeckTag();
+            public static AmeliaRossiTag ameliaRossiTag = new AmeliaRossiTag();
+            public static CaraSobeckTag caraSobeckTag = new CaraSobeckTag();
             public static GiannaDavisTag giannaDavisTag = new GiannaDavisTag();
-            GraceIvanovaTag graceIvanovaTag = new GraceIvanovaTag();
-            JackieBrownTag jackieBrownTag = new JackieBrownTag();
-            JaredPadaleckiTag jaredPadaleckiTag = new JaredPadaleckiTag();
-            MrRespassTag mrRespassTag = new MrRespassTag();
-            MrsAcunaTag mrsAcunaTag = new MrsAcunaTag();
-            MsGarciaTag msGarciaTag = new MsGarciaTag();
-            ThomasLiTag thomasLiTag = new ThomasLiTag();
+            public static GraceIvanovaTag graceIvanovaTag = new GraceIvanovaTag();
+            public static JackieBrownTag jackieBrownTag = new JackieBrownTag();
+            public static JaredPadaleckiTag jaredPadaleckiTag = new JaredPadaleckiTag();
+            public static MrRespassTag mrRespassTag = new MrRespassTag();
+            public static MrsAcunaTag mrsAcunaTag = new MrsAcunaTag();
+            public static MsGarciaTag msGarciaTag = new MsGarciaTag();
+            public static ThomasLiTag thomasLiTag = new ThomasLiTag();
             public CharacterTag[] charTagArray = {ameliaRossiTag, caraSobeckTag, giannaDavisTag, graceIvanovaTag, jackieBrownTag, jaredPadaleckiTag, mrRespassTag, mrsAcunaTag, msGarciaTag,thomasLiTag};
             public int x;
             public int y;
@@ -37,7 +37,8 @@ public class DropDownSuspects extends Button
             }
         }
         public DropDownSuspects() {
-            this(150,200);
+            this.x = x;
+            this.y = y;
         }
         public void act() 
         {

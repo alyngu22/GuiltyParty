@@ -133,7 +133,6 @@ public class MainMap extends World
         addObject(suspect9,1020,192);
         Suspect suspect10 = new Suspect();
         addObject(suspect10,66,641);
-        addObject(new AccusationButton(), 1369,714);
         
     } 
 }

@@ -18,6 +18,6 @@ public class ThomasLiTag extends CharacterTag
     public void act() 
     {
         super.act();
-        // Add your action code here.
+        // Add your action code here.  
     }    
 }

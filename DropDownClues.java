@@ -14,13 +14,22 @@ public class DropDownClues extends Button
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
           public boolean isExpanded = false;
-          HairTag hairTag = new HairTag();
-          LanyardTag lanyardTag = new LanyardTag();
-          LockerTag lockerTag = new LockerTag();
+          public static HairTag hairTag = new HairTag();
+          public static LanyardTag lanyardTag = new LanyardTag();
+          public static LockerTag lockerTag = new LockerTag();
           public ClueTag[] cluesTagArray = {hairTag, lanyardTag, lockerTag};
-               
+           public int x;
+            public int y;
+                    
 
-
+        public DropDownClues(int x, int y) {
+                    this.x = x;
+                    this.y = y;
+                    
+         }
+        public DropDownClues() {
+            this(330,200);
+        }
         public void act() 
         {
             if (Greenfoot.mouseClicked(this)) {
@@ -34,12 +43,12 @@ public class DropDownClues extends Button
         }    
         public void expand() {
                 for (int i = 0; i < cluesTagArray.length; i++) {
-                    if (((Notepad)getWorld()).cluesCollected[i]){
-                        getWorld().addObject(cluesTagArray[i],330,200 + (i * 50));
+                    if (Notepad.cluesCollected[i]){
+                        getWorld().addObject(cluesTagArray[i],x,y + (i * 50));
                     }
                     else {
                         cluesTagArray[i].changeImage();
-                        getWorld().addObject(cluesTagArray[i], 330, 200 + (i * 50));
+                        getWorld().addObject(cluesTagArray[i], x, y + (i * 50));
                     }
                 }
                  isExpanded = true;
