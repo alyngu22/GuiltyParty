@@ -13,9 +13,6 @@ public class MapButton extends Button
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     static int counts;
-    public MapButton(){
-        counts = MainMap.count;
-    }
     public void act() 
     {
         counts++;
